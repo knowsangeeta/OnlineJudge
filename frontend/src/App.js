@@ -10,24 +10,26 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 function App() {
   const currentUser = true;
   return (
-    <Router>
-      <Topbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route
-          path="/register"
-          element={currentUser ? <Home /> : <Register />}
-        />
-        <Route
-          path="/login"
-          element={currentUser ? <Home /> : <Login />}
-        />
-        <Route
-          path="/settings"
-          element={currentUser ? <Settings /> : <Login />}
-        />
-      </Routes>
-    </Router>
+    // <Router>
+    //   <Topbar />
+    //   <Routes>
+    //     <Route path="/" element={<Home />} />
+    //     <Route
+    //       path="/register"
+    //       element={currentUser ? <Home /> : <Register />}
+    //     />
+    //     <Route
+    //       path="/login"
+    //       element={currentUser ? <Home /> : <Login />}
+    //     />
+    //     <Route
+    //       path="/settings"
+    //       element={currentUser ? <Settings /> : <Login />}
+    //     />
+    //   </Routes>
+    // </Router>
+<Login />
+    
   );
 }
 

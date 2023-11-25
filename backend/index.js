@@ -17,27 +17,9 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use("/", routes);
+app.use("/", router);
 
 app.listen(port, () => {
   console.log(`server is listening at http://localhost:${port}`);
 });
 
-
-// import express from "express";
-// import DBConnection from "./database/db.js";
-// import cookieParser from "cookie-parser";
-
-
-// const app = express();
-// const port = 8000;
-
-// DBConnection();
-
-// app.get("/", (req, res) => {
-//   res.send("Hello World!");
-// });   
-
-// app.listen(port, () => {
-//     console.log(`Server is listening on port ${port}`);
-// });
