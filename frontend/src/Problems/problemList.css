@@ -1,0 +1,39 @@
+.problemList {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .problemTable {
+    margin-top: 20px;
+  }
+  
+  .tableHeader,
+  .tableRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+  }
+  
+  .tableHeader {
+    font-weight: bold;
+    background-color: #222;
+  }
+  
+  .tableRow:nth-child(even) {
+    background-color: #282828;
+  }
+  
+  h1 {
+    color: #4CAF50;
+  }
+  
+  p {
+    color: #bbb;
+  }
+  

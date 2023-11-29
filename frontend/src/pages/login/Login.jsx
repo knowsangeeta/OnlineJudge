@@ -5,7 +5,7 @@ import { Context } from "../../context/Context";
 import "./login.css";
 
 export default function Login() {
-  const userRef = useRef();
+  const emailRef = useRef();
   const passwordRef = useRef();
   const { dispatch, isFetching } = useContext(Context);
 
@@ -14,7 +14,7 @@ export default function Login() {
     dispatch({ type: "LOGIN_START" });
     try {
       const res = await axios.post("/auth/login", {
-        username: userRef.current.value,
+        username: emailRef.current.value,
         password: passwordRef.current.value,
       });
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
@@ -27,12 +27,12 @@ export default function Login() {
     <div className="login">
       <span className="loginTitle">Login</span>
       <form className="loginForm" onSubmit={handleSubmit}>
-        <label>Username</label>
+        <label>Email</label>
         <input
           type="text"
           className="loginInput"
-          placeholder="Enter your username..."
-          ref={userRef}
+          placeholder="Enter your email..."
+          ref={emailRef}
         />
         <label>Password</label>
         <input
