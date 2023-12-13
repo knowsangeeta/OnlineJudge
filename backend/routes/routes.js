@@ -6,6 +6,12 @@ import run from "../controllers/judgeController.js";
 
 const router = express.Router();
 
+
+router.get("/", (req, res) => {
+    res.send("Welcome to the backend");
+  });
+  
+
 // Auth routes
 router.post("/signup", signup);
 router.post("/login", login);

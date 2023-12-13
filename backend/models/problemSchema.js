@@ -3,13 +3,12 @@ import mongoose from "mongoose";
 const problemSchema = mongoose.Schema({
   problemid: {
     type: Number,
-    required: true,
   },
-  name: {
+  title: {
     type: String,
     required: true,
   },
-  statement: {
+  description: {
     type: String,
     required: true,
   },
@@ -25,6 +24,10 @@ const problemSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  inputformat:{
+    type: String,
+    required: true,
+  },
   sinput: {
     type: String,
     required: true,
@@ -35,11 +38,12 @@ const problemSchema = mongoose.Schema({
   },
   intestcase: {
     type: String,
-    //required: false,
+
   },
   outtestcase: {
     type: String,
-    //required: false,
+
   },
 });
 export default mongoose.model("problem", problemSchema);
+
